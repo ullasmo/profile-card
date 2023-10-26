@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+body {
+  min-height: 100dvh;
+  background-image: linear-gradient(to right, rgb(0, 128, 255), rgb(37, 2, 88));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.continer {
+  max-width: 80vw;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 90%;
+  height: 50vh;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.photo {
+  height: min(43vh, 43vw);
+  width: min(43vh, 43vw);
+  position: absolute;
+  left: -6vh;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 217, 255),
+    blue,
+    darkblue,
+    rgb(12, 7, 47)
+  );
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.text-content {
+  width: calc(100% - min(43vh, 43vw));
+  height: 43vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: min(40vh, 40vw);
+}
+button {
+  width: 140px;
+  padding: 10px;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 217, 255),
+    blue,
+    darkblue,
+    rgb(12, 7, 47)
+  );
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+@media only screen and (max-width: 810px) {
+  .content {
+    height: 80dvh;
+    position: relative;
+  }
+  .photo {
+    top: -6vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: max(75vw, 300px);
+    height: min(80vw, 300px);
+    object-fit: cover;
+  }
+  .text-content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: min(40vh, 250px);
+    padding: max(6vw, 15px);
+  }
+}
+@media only screen and (max-width: 310px) {
+  .photo {
+    top: -6vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: min(80vw, 250px);
+    height: min(80vw, 250px);
+  }
+}
